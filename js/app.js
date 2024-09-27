@@ -2,12 +2,12 @@
 let button0 =document.getElementById('button0');
 
 //texts
-let playerRollText=document.getElementById('playerRollText');
-let computerRollText=document.getElementById('computerRollText');
-let gameResultsText=document.getElementById('gameResultsText');
-let playerWinsText=document.getElementById('playerWinsText');
-let computerWinsText=document.getElementById('computerWinsText');
-let drawsText=document.getElementById('drawsText');
+let playerRollText=document.getElementById("playerRollText");
+let computerRollText=document.getElementById("computerRollText");
+let gameResultsText=document.getElementById("gameResultsText");
+let playerWinsText=document.getElementById("playerWinsText");
+let computerWinsText=document.getElementById("computerWinsText");
+let drawsText=document.getElementById("drawsText");
 
 //Data
 let playerRoll=0;
@@ -47,16 +47,17 @@ playerWins++;
   gameResultsText.innerText = "Result: Computer Wins!";
    computerWins++;
 } else {
-    gameResultsText.innertext = "Result: It's a tie!";
+    gameResultsText.innerText = "Result: It's a tie!";
+     draws++;
 
   }
 }
 
 //Update statistics
 function updateStats() {
-  playerWinsText.innertext = "playerWins:" +playerWins;
-  computerWinsText.innertext = "computerWins:" +computerWins;
-  drawsText.innertext = "Draws: " +draws;
+  playerWinsText.innerText = "playerWins:" +playerWins;
+  computerWinsText.innerText = "computerWins:" +computerWins;
+  drawsText.innerText = "Draws: " +draws;
 }
 
 
