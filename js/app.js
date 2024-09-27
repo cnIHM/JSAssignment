@@ -1,5 +1,6 @@
 //variables
 let button0 =document.getElementById('button0');
+
 //texts
 let playerRollText=document.getElementById('playerRollText');
 let computerRollText=document.getElementById('computerRollText');
@@ -18,22 +19,18 @@ let draws=0;
 
 //Processes
 button0.addEventListener('click',function() {
-  getRandomNumberOneToSixForPlayer();
+ getRandomNumberOneToSixForPlayer();
  showPlayerRollResult ();
-  showComputerRollResult();
-  determineWinner();
-  updateStats();
+ showComputerRollResult();
+ determineWinner();
+ updateStats();
 
 });
 //Controllers
 function getRandomNumberOneToSixForPlayer(){
   playerRoll=Math.floor(Math.random()*6)+1;
   computerRoll=Math.floor(Math.random()*6)+1;
-}
-function getRandomNumberOneToSixForComputer(){
-  playerRoll =Math.floor(Math.random()*6)+1;
-  computerRoll=Math.floor(Math.random()*6)+1;
-}
+  }
 //Views
 function showPlayerRollResult(){
   playerRollText.innerText="Player Roll:" +playerRoll;
@@ -43,22 +40,25 @@ function showComputerRollResult(){
 }
 // Determine Winner
 function determineWinner(){
-  if (playerRoll> computerRoll)  }
-gameResultsText.innerText="Result: You Win!";
+  if (playerRoll> computerRoll) {
+gameResultsText.innerText= "Result: You Win!";
 playerWins++;
 } else if (playerRoll < computerRoll) {
   gameResultsText.innerText = "Result: Computer Wins!";
    computerWins++;
 } else {
-  gameResultsText.innertext= "Result: It's a tie!";
+    gameResultsText.innertext = "Result: It's a tie!";
+
+  }
 }
 
 //Update statistics
 function updateStats() {
-  playerWinsText.innertext="playerWins:" +playerWins;
-  computerWinsText.innertext="computerWins:" +computerWins;
-  drawsText.innertext ="Draws: " +draws;
-
+  playerWinsText.innertext = "playerWins:" +playerWins;
+  computerWinsText.innertext = "computerWins:" +computerWins;
+  drawsText.innertext = "Draws: " +draws;
 }
+
+
 
 
