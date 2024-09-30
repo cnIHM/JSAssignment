@@ -72,22 +72,26 @@ document.cookie= "draws=" + draws + ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
   }
 
 function loadGame () {
-  playerWins= getCookie
+  playerWins= getCookie ("playerWins");
+  computerWins= getCookie ("computerWins");
+  draws  = getCookie ("drawsText");
 
-}
-function getCookie(cname) {
+
+  function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) === 0) {
-            return c.substring(name.length, c.length);
-        }
-     }
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return 0;   } }
+
 
 
 
