@@ -74,7 +74,7 @@ document.cookie= "draws=" + draws + ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
 function loadGame () {
   playerWins= getCookie ("playerWins");
   computerWins= getCookie ("computerWins");
-  draws  = getCookie ("drawsText");
+  draws= getCookie ("draws");
 
 
   function getCookie(cname) {
